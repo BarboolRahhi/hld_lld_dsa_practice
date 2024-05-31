@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Course Selling Website</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+            .menu.show {
+                display: block;
+            }
+            .menu-below {
+                display: none;
+            }
+            .menu-below.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- Header -->
+<header class="bg-blue-500 text-white py-4">
+    <div class="container mx-auto px-4 md:px-0 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Java Course</h1>
+        <button class="md:hidden focus:outline-none menu-toggle">
+            <!-- Add your mobile menu icon here -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <nav class="md:flex md:items-center hidden menu">
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">Courses</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Navigation Menu Below Header (Mobile View) -->
+<nav class="container mx-auto py-4 menu-below md:hidden">
+    <ul class="flex flex-col items-center space-y-4">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">Courses</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
+<!-- Hero Section -->
+<section class="bg-gray-200 py-16">
+    <div class="container mx-auto flex justify-center items-center">
+        <img src="https://via.placeholder.com/800x400" alt="Java Course" class="w-1/2 rounded-lg">
+    </div>
+</section>
+
+<!-- Course List -->
+<section class="py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Our Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course Card -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-2">Advanced Java Programming</h3>
+                <p class="text-gray-600 mb-4">Master advanced Java concepts and techniques.</p>
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-600">Enroll
+                    now</a>
+            </div>
+            <!-- Add more course cards here -->
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x200" alt="Course Image" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Advanced Java Programming</h3>
+                    <p class="text-gray-600 mb-4">Master advanced Java concepts and techniques.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-gray-800 font-bold">$199</p>
+                        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-600">Enroll
+                            now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- Price List -->
+<section class="bg-gray-200 py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Price Card -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-2">Advanced Java Programming</h3>
+                <p class="text-gray-600 mb-4">Price: $199</p>
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-600">Enroll
+                    now</a>
+            </div>
+            <!-- Add more price cards here -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Java Course. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        const menuBelow = document.querySelector('.menu-below');
+
+        menuToggle.addEventListener('click', function() {
+            menuBelow.classList.toggle('show');
+        });
+    });
+</script>
+
+</body>
+
+</html>
